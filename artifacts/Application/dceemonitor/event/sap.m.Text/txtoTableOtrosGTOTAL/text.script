@@ -1,0 +1,5 @@
+if (typeof GFOB === "undefined" || GFOB === null || GFOB === "") { return; }  
+var formattedText = GFOB; 
+gv_total_otros = gv_total_otros + GFOB; 
+oInputTotalOtrosG.setValue(gv_total_otros);
+return formattedText;

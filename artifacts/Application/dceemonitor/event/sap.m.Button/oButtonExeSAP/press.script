@@ -1,0 +1,44 @@
+var objeto = {};
+var Ee_InCab = [];
+
+if (tablaData.ENTREGASAP != '') {
+
+    sap.m.MessageToast.show("Error: Ya existe entrega SAP", {
+        duration: 5000,
+    });
+
+} else {
+
+    var fecha = new Date(),
+        dd = fecha.getDate(),
+        mm = fecha.getMonth() + 1,
+        yyyy = fecha.getFullYear(),
+        hoy;
+    if (mm < 10) {
+        if (dd < 10) {
+            hoy = yyyy.toString() + "0" + mm.toString() + "0" + dd.toString();
+        } else {
+            hoy = yyyy.toString() + "0" + mm.toString() + dd.toString();
+        }
+    } else {
+        if (dd < 10) {
+            hoy = yyyy.toString() + mm.toString() + "0" + dd.toString();
+        } else {
+            hoy = yyyy.toString() + mm.toString() + dd.toString();
+        }
+    }
+
+    var consulta = {};
+
+    exe_api_detalles = 'X';
+
+    var options = {
+        parameters: {
+            "nroEntrega": tablaData.ENTREGA, // Optional
+            "tippFactura": tablaData.TIPOFACTURA // Optional
+        }
+    };
+
+    apioRestAPIConsultarEntregasDetalles(options);
+
+}

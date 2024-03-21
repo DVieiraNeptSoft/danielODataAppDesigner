@@ -1,0 +1,4 @@
+if (typeof FECHACG === "undefined" || FECHACG === null || FECHACG === "") { return; }  
+var formattedText = FECHACG; 
+formattedText = (formattedText.replace(/-/g, ".")).substr(0,10);
+return formattedText;

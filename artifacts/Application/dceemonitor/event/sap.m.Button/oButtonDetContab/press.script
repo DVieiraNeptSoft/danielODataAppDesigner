@@ -1,0 +1,10 @@
+var options = {
+    headers: {
+        "x-csrf-token": "fetch" // Optional. 
+    }
+};
+
+apioRestAPI_GET(options).then(
+    function (data, data2) {
+
+    });

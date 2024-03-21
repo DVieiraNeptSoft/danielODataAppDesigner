@@ -1,0 +1,5 @@
+if (typeof FLETES === "undefined" || FLETES === null || FLETES === "") { return; }  
+var formattedText = FLETES; 
+gv_total_flete = gv_total_flete + FLETES;
+oInputTotalFlete.setValue(gv_total_flete);
+return formattedText;

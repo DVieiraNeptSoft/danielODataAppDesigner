@@ -1,0 +1,4 @@
+if (typeof FECCREA === "undefined" || FECCREA === null || FECCREA === "") { return; }  
+var formattedText = FECCREA;
+formattedText = (FECCREA.replace(/-/g, ".")).substr(0, 10);
+return formattedText;

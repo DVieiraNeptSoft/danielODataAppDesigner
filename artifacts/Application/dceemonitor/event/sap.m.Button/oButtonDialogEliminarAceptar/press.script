@@ -1,0 +1,63 @@
+var objeto = {};
+var EE_Upddel = [];
+var EE_Updout = [];
+var EE_API = [];
+
+var data = modeloDialogEliminar.getData();
+
+console.log(modeloDialogEliminar.getData());
+debugger;
+
+
+if (data.ENTREGASAP != '' || data.ENTREGASAP != undefined) {
+
+    EE_Upddel.push({
+        "Funcion": "D",
+        "Xblnr": data.ENTREGA,
+        "Vbeln": data.ENTREGASAP
+    });
+
+    objeto.EE_Upddel = EE_Upddel;
+    objeto.EE_Updout = EE_Updout;
+
+    oODataSource.create("/EE_UpdateSet", objeto, {
+        success: function (result, oResponse) {
+            console.log(oResponse);
+            console.log(result.EE_Updout.results[0].Message);
+
+            if (result.EE_Updout.results[0].Type == "S") {
+
+                sap.m.MessageToast.show("Entrega SAP: " + tablaData.ENTREGASAP + " eliminada", {
+                    duration: 5000,
+                });
+
+                debugger;
+
+                var options = {
+                    data: EE_Upddel
+                };
+
+                apioRestAPI_BorrarEntrega(options);
+
+            } else {
+
+                sap.m.MessageToast.show(result.EE_Updout.results[0].Message, {
+                    duration: 5000,
+                });
+
+            }
+
+        }, error: function (oError) {
+
+            sap.m.MessageToast.show("Fallo en la conexión", {
+                duration: 5000,
+            });
+
+        }
+    })
+
+} else {
+
+
+
+}

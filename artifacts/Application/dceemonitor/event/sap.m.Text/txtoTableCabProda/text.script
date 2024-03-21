@@ -1,0 +1,6 @@
+if (typeof Proda === "undefined" || Proda === null || Proda === "") { return; }  
+var formattedText = Proda; 
+var Empty = '';
+
+formattedText = Empty.concat(formattedText.substring(0,4),'.',formattedText.substring(4,6),'.',formattedText.substring(6,8));
+return formattedText;

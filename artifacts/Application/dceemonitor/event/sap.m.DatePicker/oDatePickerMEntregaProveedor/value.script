@@ -1,0 +1,4 @@
+if (typeof FECHAEP === "undefined" || FECHAEP === null || FECHAEP === "") { return; }
+var formattedText = FECHAEP;
+formattedText = (FECHAEP.replace(/-/g, ".")).substr(0, 10);
+return formattedText;

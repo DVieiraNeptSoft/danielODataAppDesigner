@@ -1,0 +1,5 @@
+if (typeof SEGUROS === "undefined" || SEGUROS === null || SEGUROS === "") { return; }  
+var formattedText = SEGUROS; 
+gv_total_seguro = gv_total_seguro + SEGUROS;
+oInputTotalSeguros.setValue(gv_total_seguro);
+return formattedText;

@@ -1,0 +1,9 @@
+oDialogConsultaProveedor.open();
+
+if (oSelectTProveedor.length === 0 || oSelectTProveedor.length === undefined) {
+    var sCodigo = new sap.ui.core.Item({ key: "Código", text: "Código" });
+    oSelectTProveedor.addItem(sCodigo);
+
+    var sNombre = new sap.ui.core.Item({ key: "Nombre", text: "Nombre" });
+    oSelectTProveedor.addItem(sNombre);
+}

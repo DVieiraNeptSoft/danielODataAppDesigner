@@ -1,0 +1,32 @@
+if (oFechaCrea.getDateValue() !== null || oFechaCrea.getSecondDateValue() !== null) {
+    var options = {
+        parameters: {
+            "enBolnr": oPacking.getValue(), // Optional 
+            "enEntrega": oEntrega.getValue(), // Optional 
+            "enLifnr": oProveedor.getValue(), // Optional 
+            "enVbeln": oTransp.getValue(), // Optional 
+            "fechaFin": oFechaCrea.getSecondDateValue().toString(), // Optional 
+            "fechaIni": oFechaCrea.getDateValue().toString(), // Optional 
+            "numeroPaginas": "1", // Optional 
+            "registrosPorPagina": "999" // Optional 
+        }
+    };
+} else {
+    var options = {
+        parameters: {
+            "enBolnr": oPacking.getValue(), // Optional 
+            "enEntrega": oEntrega.getValue(), // Optional 
+            "enLifnr": oProveedor.getValue(), // Optional 
+            "enVbeln": oTransp.getValue(), // Optional 
+            "fechaFin": '', // Optional 
+            "fechaIni": '', // Optional 
+            "numeroPaginas": "1", // Optional 
+            "registrosPorPagina": "999" // Optional 
+        }
+    };
+}
+
+
+debugger;
+console.log(options);
+apioRestAPIConsultarEntregas(options);

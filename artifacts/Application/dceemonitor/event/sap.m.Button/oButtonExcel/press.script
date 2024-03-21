@@ -1,0 +1,69 @@
+jQuery.sap.require("sap.ui.core.util.Export");
+ 
+jQuery.sap.require("sap.ui.core.util.ExportTypeCSV");
+
+ 
+var oExport = new sap.ui.core.util.Export({
+
+     // Type that will be used to generate the content. Own ExportType's can be created to support other formats
+     exportType: new sap.ui.core.util.ExportTypeCSV({
+         separatorChar: ";"
+ 
+}),
+
+     // Pass in the model created above
+ 
+models: modeloTableCabCont,
+
+     // binding information for the rows aggregation 
+     rows: {
+         path: "/"
+ 
+},
+
+     columns: [{
+             name: "Mandante",
+             template: {
+                 content: {
+                     path: "Mandt"
+                 }
+             }
+         }, {
+             name: "Numero Packing List",
+             template: {
+                 content: {
+                     path: "Xblnr"
+                 }
+             }
+         }, {
+             name: "N. Doc. Compras",
+             template: {
+                 content: {
+                     path: "Ebeln"
+                 }
+             }
+         },
+         {
+             name: "Pos. Doc. Contable",
+             template: {
+                 content: {
+                     path: "Ebelp"
+                 }
+             }
+         }, {
+             name: "Número De Material",
+             template: {
+                 content: {
+                     path: "Matnr"
+                 }
+             }
+         }
+     ]
+ 
+});
+
+ oExport.generate().done(function(sContent) {
+     oExport.saveFile();
+ }).always(function() {
+     this.destroy();
+ });

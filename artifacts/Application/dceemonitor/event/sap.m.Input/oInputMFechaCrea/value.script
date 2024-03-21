@@ -1,0 +1,4 @@
+if (typeof FECHACREA === "undefined" || FECHACREA === null || FECHACREA === "") { return; }
+var formattedText = FECHACREA;
+formattedText = (FECHACREA.replace(/-/g, ".")).substr(0, 10);
+return formattedText;

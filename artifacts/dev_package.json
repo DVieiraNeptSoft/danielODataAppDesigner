@@ -1,0 +1,51 @@
+{
+	"id": "153f4f17-8de7-ee11-aaee-000d3a64f286",
+	"createdAt": "2024-03-21T14:12:47.243Z",
+	"createdBy": "daniel.vieira@neptune-software.com",
+	"git": {
+		"remote": "https://github.com/DVieiraNeptSoft/danielODataAppDesigner"
+	},
+	"name": "danielODataAppDesigner",
+	"description": null,
+	"ver": "24.3.21.1416",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "f7465e1e-48f9-ec11-b47a-0050f279e168",
+			"application": "dceemonitor",
+			"title": "",
+			"description": "",
+			"package": {
+				"id": "153F4F17-8DE7-EE11-AAEE-000D3A64F286"
+			}
+		}
+	],
+	"api": [],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": [],
+	"code_snippets": [],
+	"wf_determination": [],
+	"wf_taskaction": []
+}

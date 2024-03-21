@@ -1,0 +1,9 @@
+// Replace yourField with FieldName
+var context = oEvent.oSource.getBindingContext();  
+
+// Get Single Field
+var value = context.getProperty("Lifnr");
+
+oProveedor.setValue(value);
+
+oDialogConsultaProveedor.close();

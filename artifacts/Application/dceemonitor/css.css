@@ -1,0 +1,72 @@
+.PSeleccione {
+    /* font-weight: bold; */
+    font-size: 16px;
+}
+
+.sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom: 1px solid #d9d9d900;
+}
+
+.padvbox {
+    padding-left: 90px;
+}
+
+.padhboxMEntrega {
+    padding-left: 6px;
+}
+
+.padhboxxMEntrega {
+    padding-left: 16px;
+}
+
+.padboxproveedor {
+    padding-left: 8px;
+}
+
+.padvolumen {
+    padding-left: 45px;
+}
+
+.padMSociedad{
+    padding-left: 52px;
+}
+
+.padMPaisO{
+    padding-left: 39px;
+}
+
+.padMMoneda{
+    padding-left: 28px;
+}
+
+.padMNombreProveedor{
+    padding-left: 47px;
+}
+
+.padMCODProveedor{
+    padding-left: 1px;
+}
+
+.padMVia{
+    padding-left: 103px;
+}
+
+.padMEMReal{
+    padding-left: 76px;
+}
+
+.padMDocTransporte{
+    padding-left: 3px;
+}
+
+.padMPeso{
+    padding-left: 107px;
+}
+
+.padMUNPeso{
+    padding-left: 19px;
+}
+
+.padESociedad{
+    padding-left: 42px;
+}

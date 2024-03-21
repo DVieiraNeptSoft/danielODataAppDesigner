@@ -1,0 +1,4 @@
+if (typeof FECHAFIS === "undefined" || FECHAFIS === null || FECHAFIS === "") { return; }  
+var formattedText = FECHAFIS; 
+formattedText = (formattedText.replace(/-/g, ".")).substr(0,10);
+return formattedText;

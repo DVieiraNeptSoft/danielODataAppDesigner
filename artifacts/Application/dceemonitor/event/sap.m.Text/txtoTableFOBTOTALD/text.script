@@ -1,0 +1,5 @@
+if (typeof TOTALD === "undefined" || TOTALD === null || TOTALD === "") { return; }  
+var formattedText = TOTALD; 
+gv_total_fob = gv_total_fob + TOTALD  
+oInputTotalFOB.setValue(gv_total_fob);
+return formattedText;
